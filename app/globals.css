@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #222; background: #fffaf5; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; }
+.container { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0; }
+h1 { margin: 0 0 12px; font-size: 42px; }
+.intro { margin: 0 0 28px; color: #555; }
+.cards, .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.card { overflow: hidden; border: 1px solid #ddd; border-radius: 12px; background: white; text-decoration: none; }
+.card img, .gallery img { display: block; width: 100%; object-fit: cover; }
+.card img { height: 260px; }
+.card h2 { margin: 0; padding: 18px; font-size: 22px; }
+.back-link { display: inline-block; margin-bottom: 28px; }
+.gallery { margin: 28px 0; }
+.gallery img { height: 350px; border-radius: 12px; }
+.like-button { padding: 12px 18px; border: 0; border-radius: 8px; color: white; background: #c04d6d; font: inherit; cursor: pointer; }
+.like-button:hover { background: #a93d5c; }
+
+@media (max-width: 650px) {
+  .container { padding: 28px 0; }
+  h1 { font-size: 34px; }
+  .cards, .gallery { grid-template-columns: 1fr; }
+}
